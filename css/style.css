@@ -245,25 +245,31 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .scroll-cue {
   margin-top: var(--space-lg);
   text-align: center;
-  opacity: 0.5;
-  transition: opacity var(--transition);
 }
 
-.scroll-cue:hover {
-  opacity: 0.8;
+.scroll-cue a {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .scroll-arrow {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: var(--color-gold);
   animation: scroll-bounce 2s ease-in-out infinite;
   line-height: 1;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.scroll-cue a:hover .scroll-arrow {
+  color: var(--color-gold-hover);
+  transform: translateY(4px);
 }
 
 @keyframes scroll-bounce {
-  0%, 100% { transform: translateY(0); opacity: 0.5; }
-  50% { transform: translateY(6px); opacity: 1; }
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(8px); opacity: 1; }
 }
 
 
