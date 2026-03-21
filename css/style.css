@@ -178,10 +178,18 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .hero {
   text-align: center;
   background-color: var(--color-bg);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-lg) 0;
 }
 
 .hero-logo {
-  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
 .hero-logo img {
@@ -191,8 +199,20 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 }
 
 .hero > .pillar {
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
+  padding-top: var(--space-lg);
+  padding-bottom: 0;
+}
+
+@media (min-width: 40rem) {
+  .hero-logo {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero-logo {
+    max-width: 600px;
+  }
 }
 
 .hero-intro {
@@ -219,7 +239,7 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 /* --- Scroll Indicator --- */
 
 .scroll-cue {
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-lg);
   text-align: center;
   opacity: 0.5;
   transition: opacity var(--transition);
