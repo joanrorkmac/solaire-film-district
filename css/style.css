@@ -182,12 +182,14 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: var(--space-lg) 0;
+  justify-content: flex-start;
+  padding: var(--space-3xl) 0 var(--space-lg);
 }
 
 .hero-logo,
 .page-logo {
+  position: relative;
+  z-index: 2;
   max-width: 700px;
   margin: 0 auto;
   padding: 0 var(--gutter);
@@ -201,11 +203,18 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 }
 
 .hero > .pillar {
+  position: relative;
+  z-index: 1;
   padding-top: var(--space-lg);
   padding-bottom: 0;
 }
 
 @media (min-width: 40rem) {
+  .hero {
+    justify-content: center;
+    padding: var(--space-lg) 0;
+  }
+
   .hero-logo,
   .page-logo {
     max-width: 750px;
