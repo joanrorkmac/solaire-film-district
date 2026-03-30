@@ -758,6 +758,7 @@ a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 }
 @media (max-width: 768px) {
   .hero {
-    background-position: top left;
+    background-position: 15% 0%;
+    background-size: 170%;
   }
 }
