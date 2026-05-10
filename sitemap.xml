@@ -16,6 +16,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://solairefilmdistrict.fr/decision-makers.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://solairefilmdistrict.fr/loi.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
